@@ -33,3 +33,5 @@
 
 # Other
 .DS_Store
+./current.cpp
+./input.txt
