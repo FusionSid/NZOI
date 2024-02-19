@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define impossiblecheck               \
-    if (state != 'S' && state != 'E') \
+    if (state == 'N') \
     {                                 \
         cout << "impossible\n";       \
         return 0;                     \
