@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 
 using std::cin, std::cout, std::string;
-int main()
-{
+int main() {
     int s, m, l;
     cin >> s >> m >> l;
 
@@ -20,9 +19,12 @@ int main()
     int left_s = space_s != 1 ? std::floor(space_s / 2) : 0;
     int right_s = space_s - left_s;
 
-    cout << string(left_l, '_') << string(l, 'L') << string(right_l, '_') << "\n";
-    cout << string(left_m, '_') << string(m, 'M') << string(right_m, '_') << "\n";
-    cout << string(left_s, '_') << string(s, 'S') << string(right_s, '_') << "\n";
+    cout << string(left_l, '_') << string(l, 'L') << string(right_l, '_')
+         << "\n";
+    cout << string(left_m, '_') << string(m, 'M') << string(right_m, '_')
+         << "\n";
+    cout << string(left_s, '_') << string(s, 'S') << string(right_s, '_')
+         << "\n";
 
     return 0;
 }

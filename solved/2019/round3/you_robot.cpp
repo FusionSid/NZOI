@@ -3,26 +3,22 @@
 typedef std::list<int> vi;
 
 using std::cin, std::cout, std::string;
-int main()
-{
+int main() {
     std::map<int, vi> graph;
 
     int nodes, passages, start, end;
     cin >> nodes >> passages >> start >> end;
 
-    for (int i = 0; i < passages; i++)
-    {
+    for (int i = 0; i < passages; i++) {
         int node, passage;
         cin >> node >> passage;
 
-        if (graph.find(node) == graph.end())
-        {
+        if (graph.find(node) == graph.end()) {
             graph[node] = vi();
         }
         graph[node].push_back(passage);
 
-        if (graph.find(passage) == graph.end())
-        {
+        if (graph.find(passage) == graph.end()) {
             graph[passage] = vi();
         }
         graph[passage].push_back(node);
@@ -36,17 +32,13 @@ int main()
     visited_nodes[start] = true;
     queue.push(start);
 
-    while (!queue.empty())
-    {
+    while (!queue.empty()) {
         int n = queue.front();
         queue.pop();
 
         auto neighbours = graph[n];
-        for (auto neighbour : neighbours)
-        {
-            if (!visited_nodes[neighbour])
-            {
-
+        for (auto neighbour : neighbours) {
+            if (!visited_nodes[neighbour]) {
                 queue.push(neighbour);
                 visited_nodes[neighbour] = true;
                 prev[neighbour] = n;
@@ -55,8 +47,7 @@ int main()
     }
 
     int steps = 0;
-    for (int i = end; i != -1; i = prev[i])
-        steps++;
+    for (int i = end; i != -1; i = prev[i]) steps++;
 
     cout << steps - 1 << "\n";
 

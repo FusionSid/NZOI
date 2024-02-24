@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 
 using std::cin, std::cout, std::string;
-int main()
-{
+int main() {
     double bar, outpost, inn, d;
     cin >> bar >> outpost >> inn >> d;
 
@@ -13,16 +12,13 @@ int main()
     int closest = std::min(std::min(nearest_bar, nearest_outpost), nearest_inn);
 
     int amount_of_min = 0;
-    for (auto i : {nearest_bar, nearest_inn, nearest_outpost})
-    {
-        if (i == closest)
-        {
+    for (auto i : {nearest_bar, nearest_inn, nearest_outpost}) {
+        if (i == closest) {
             amount_of_min++;
         }
     }
     cout << closest << "\n";
-    if (amount_of_min != 1)
-        cout << "can't make up my mind\n";
+    if (amount_of_min != 1) cout << "can't make up my mind\n";
 
     return 0;
 }

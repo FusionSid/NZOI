@@ -4,8 +4,7 @@
 
 using std::cin, std::cout, std::string;
 
-int main()
-{
+int main() {
     int n, k;
     cin >> n;
     cin >> k;
@@ -15,29 +14,23 @@ int main()
     int consecutive = 0;
 
     int q;
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         cin >> q;
         elements[current_element] = q;
         current_element++;
 
-        if (q < k)
-        {
+        if (q < k) {
             consecutive++;
-        }
-        else
-        {
+        } else {
             consecutive = 0;
         }
 
-        if (consecutive == 3)
-        {
+        if (consecutive == 3) {
             break;
         }
     }
 
-    if (consecutive != 3)
-    {
+    if (consecutive != 3) {
         cout << "No Fault";
         return 0;
     }

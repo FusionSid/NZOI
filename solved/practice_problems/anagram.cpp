@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 
 using std::cin, std::cout, std::string;
-int main()
-{
+int main() {
     string word1;
     string word2;
 

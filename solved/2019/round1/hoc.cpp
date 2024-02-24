@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 
 using std::cin, std::cout;
-int main()
-{
+int main() {
     int n;
     cin >> n;
 

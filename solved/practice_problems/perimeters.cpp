@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 
 using std::cin, std::cout, std::string;
-int main()
-{
+int main() {
     int x, y, c, d;
     cin >> x >> y >> c >> d;
 
